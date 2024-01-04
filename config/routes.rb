@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get "cars/:id/edit", to: "cars#new"
   patch "cars/:id", to: "cars#update"
+  delete "cars/:id", to: "cars#destroy"
   # Defines the root path route ("/")
   # root "posts#index"
 end
