@@ -6,11 +6,16 @@ class CarsController < ApplicationController
   def update
     @car = Car.find(params[:id])
     @car.update(car_params)
+
+    if @car.save
+      redirect_to car_path(@car)
+    end
   end
 
   def destroy
     @car = Car.find(params[:id])
     @car.destroy
+  end
 
   def index
     @cars = Car.all

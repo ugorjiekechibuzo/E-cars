@@ -1,0 +1,9 @@
+<div class="row">
+    <%= simple_form_for(@car, html: { class: 'mt-4' }) do |f| %>
+      <%= f.input :model, label: 'Model' %>
+      <%= f.input :make, label: 'Make' %>
+      <div class="actions">
+        <%= f.submit 'Submit', class: 'btn-flat' %>
+      </div>
+    <% end %>
+  </div>
