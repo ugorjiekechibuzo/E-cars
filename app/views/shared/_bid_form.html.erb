@@ -1,0 +1,7 @@
+<div class="row">
+  <%= simple_form_for [@car, @bid] do |f| %>
+    <%= f.input :amount %>
+    <%= f.input :closing_time %>
+    <%= f.submit "Update Bid", class: "btn btn-primary" %>
+  <% end %>
+</div>

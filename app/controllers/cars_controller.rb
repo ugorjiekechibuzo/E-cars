@@ -16,7 +16,8 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
-      redirect_to car_path(@car)
+      @bid = @car.bids.order(created_at: :desc).first
+      redirect_to edit_car_bid_path(@car, @bid)
     else
       render :new
     end
