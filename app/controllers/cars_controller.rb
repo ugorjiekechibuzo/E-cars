@@ -1,4 +1,16 @@
 class CarsController < ApplicationController
+  def edit
+    @car = Car.find(params[:id])
+  end
+
+  def update
+    @car = Car.find(params[:id])
+    @car.update(car_params)
+  end
+
+  def destroy
+    @car = Car.find(params[:id])
+    @car.destroy
 
   def index
     @cars = Car.all
